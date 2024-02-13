@@ -7,7 +7,7 @@ The SIM card used in this reference architecture is provided by Open-Cells, and 
 
 Insert the nano SIM card into the SIM card reder/writer, and plug it into the USB slot on the UE computer.
 
-To read and program the SIM card, we use the program program_uicc from Open-Cells 
+To read and program the SIM card, we use the program program_uicc from Open-Cells (https://open-cells.com/index.php/uiccsim-programing/)
 
 We first read the existing data on the SIM by running the command below.
 ```
