@@ -46,6 +46,8 @@ OAI-5G-core/docker-compose/database
 we can find which .sql file our deployment is using over here
 ![sqldb](https://github.com/abhic137/oai-5gsim-programing/assets/46273637/d11f7264-e94e-4eb8-9f9d-5fd715744109)
 edit the .sql file according to the mnc and mcc values ,here we are using 001 and 01. Look at the refrence .sql file provided with this repo
+in the ```lines 160 and 160``` we can see that we are having the entires for the current ```ueids```
+we havve to add corresponding entries at the ```lines 320 and 321```
 
 ### AMF LOGS (sims connected to the 5G core)
 ![sim connected](https://github.com/abhic137/oai-5gsim-programing/assets/46273637/9deff597-2e77-4baf-803e-be337daa211b)
