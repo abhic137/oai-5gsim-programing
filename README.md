@@ -51,3 +51,9 @@ we have to add corresponding entries at the ```lines 320 and 321```
 
 ### AMF LOGS (sims connected to the 5G core)
 ![sim connected](https://github.com/abhic137/oai-5gsim-programing/assets/46273637/9deff597-2e77-4baf-803e-be337daa211b)
+
+
+
+### Reference links
+https://kb.ettus.com/OAI_Reference_Architecture_for_5G_and_6G_Research_with_USRP
+https://open-cells.com/index.php/uiccsim-programing/
