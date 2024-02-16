@@ -17,17 +17,35 @@ quectel-ue-program uicc output for
 
 We then write the key and the OPC in the UICC file in the SIM card. The ADM value enables this. Run the command below to perform this operation, where ADM_VALUE_FROM_SIM is the ADM value printed directly on the SIM card itself.
 ```
-   sudo ./program_uicc --adm <ADM_VALUE_FROM_SIM> --key 0C0A34601D4F07677303652C0462535B --opc 63bfa50ee6523365ff14c1f45f88737d --authenticate --noreadafter 
-```
-quectel-ue-program uicc output for 
+sudo ./program_uicc --adm 0c008521 --imsi 001010000000037 --isdn 00000037 --key 6874736969202073796d4b2079650a73 --opc 504f20634f6320504f50206363500a4f -spn "idrbt" --authenticate --noreadafter 
 
-Ensure that the values being programmed into the SIM card match the corresponding values entered in the SQL database on the CN machine. The values of primary importance are listed in the table below.
+```
 
-### Primary Configuration Parameters for UE, gNB, CN Parameter 	UE 	gNB 	CN
 ```
-IMSI 	208920100001101 	MCC: 208, MNC: 92 	208920100001101
-MSISDN 	00000101 		00000101
-IMEI 	863305040549338 		863305040549338
-Key 	0C0A34601D4F07677303652C0462535B 		0C0A34601D4F07677303652C0462535B
-OPC 	63bfa50ee6523365ff14c1f45f88737d 		63bfa50ee6523365ff14c1f45f88737d
+sudo ./program_uicc --adm 0c008520 --imsi 001010000000036 --isdn 00000036 --key 6874736969202073796d4b2079650a73 --opc 504f20634f6320504f50206363500a4f -spn "idrbt" --authenticate --noreadafter 
+
+
 ```
+![sim program](https://github.com/abhic137/oai-5gsim-programing/assets/46273637/4dfb64d6-5221-432a-8d83-dbb98c582aa5)
+
+
+
+Basic format to write a sim
+```
+   sudo ./program_uicc --adm <ADM_VALUE_FROM_SIM> --key <KEY_VALUE> --opc <OPC_VALUE> --authenticate --noreadafter 
+```
+
+
+Ensure that the values being programmed into the SIM card match the corresponding values entered in the SQL database on the machine. 
+# SQL file in the 5G core.
+look for the sqldb file which is being used by the core.
+you will find the .sql db file in this path
+```
+OAI-5G-core/docker-compose/database
+```
+we can find which .sql file our deployment is using over here
+![sqldb](https://github.com/abhic137/oai-5gsim-programing/assets/46273637/d11f7264-e94e-4eb8-9f9d-5fd715744109)
+
+
+### AMF LOGS (sims connected to the 5G core)
+![sim connected](https://github.com/abhic137/oai-5gsim-programing/assets/46273637/9deff597-2e77-4baf-803e-be337daa211b)
